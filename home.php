@@ -9,9 +9,7 @@
         <?php while ( have_posts() ) : the_post(); ?>
           <?php  get_template_part("template-parts/bloglist", get_post_type());?>
         <?php endwhile; ?>
-        <?php the_posts_pagination( ) ?>
-        <!-- <div class="f_left"><?php //next_posts_link( 'Older posts' ); ?></div>
-        <div class="f_right"><?php //previous_posts_link( 'Newer posts' ); ?></div> -->
+        <?=get_the_posts_pagination(array('class' => 'blog_nav') ) ?>
       <?php else: ?>
         <?=_e( 'Sorry, no posts matched your criteria.', 'textdomain' ); ?>
       <?php endif; ?>

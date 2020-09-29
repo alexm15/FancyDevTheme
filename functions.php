@@ -52,3 +52,5 @@ add_action( 'widgets_init', 'fancydev_register_sidebars' );
 */
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'post-formats',  array ( 'aside', 'gallery', 'quote', 'image', 'video' ) );
+
+require get_template_directory() . '/inc/fancy_dev_walker.php';
